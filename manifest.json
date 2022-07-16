@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "TabPen",
+    "version": "0.1",
+    "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+            "css":["style.css"],
+          "js":["sketch.js","p5.min.js"]
+         
+
+       
+        }
+      ],
+    "background": {
+      "scripts": ["background.js"]
+
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title":"Page Paint"
+       
+      },
+      "web_accessible_resources": ["/images/marker.png", "/images/eraser.png", "/images/save.png", "/images/pointer.png", "/images/highlighter.png", "/images/clear.png", "/images/undo.png", "/images/redo.png", "/images/move.png", "/images/text.png", "/images/line.png", "/images/exit.png", "/images/cup-border.png"],
+      "matches": ["<all_urls>"]
+        
+      
+   
+
+  }
